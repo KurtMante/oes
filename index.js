@@ -85,7 +85,7 @@ function scheduleJobs() {
   `;
   tableBody.innerHTML += avgRow;
 
-  // Show the table and Gantt chart
+  
   document.getElementById('output-table').style.display = 'table';
   document.getElementById('gantt-container').innerHTML = ganttChartHTML;
 }s
