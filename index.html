@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Short Job First (SJF) Scheduling</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <h1>Short Job First (SJF) Scheduling</h1>
+  
+  <div class="input-container">
+    <label for="job-name">Job Name: </label>
+    <input type="text" id="job-name" placeholder="Job Name">
+    <label for="arrival-time">Arrival Time: </label>
+    <input type="number" id="arrival-time" placeholder="Arrival Time">
+    <label for="burst-time">Burst Time: </label>
+    <input type="number" id="burst-time" placeholder="Burst Time">
+    <button class="button" onclick="addJob()">Add Job</button>
+  </div>
+  
+  <div class="input-container">
+    <h3>Jobs List:</h3>
+    <ul id="job-list"></ul>
+  </div>
+
+  <div id="gantt-container" class="gantt-container"></div>
+  
+  <table class="output-table" id="output-table" style="display:none;">
+    <thead>
+      <tr>
+        <th>Job</th>
+        <th>Arrival Time</th>
+        <th>Burst Time</th>
+        <th>Call Time</th>
+        <th>Turnaround Time</th>
+        <th>Waiting Time</th>
+        
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="index.js"></script>
+  <div class="input-container">
+    <button class="button" onclick="scheduleJobs()">Run Scheduling</button>
+  </div>
+</body>
+</html>
